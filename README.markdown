@@ -27,18 +27,16 @@ Building
 If you already have the AOSP repo and managed to build mkbootimg, adding
 unbootimg is easy.
 
-- Download the [unbootimg source](https://github.com/szym/unbootimg/zipball/master)
-- Unpack it to your `mydroid/repo/system/core/mkbootimg`. Note: it overwrites
-Android.mk to include unbootimg.
+- Clone this repository under `AOSP/repo/external/unbootimg`
 - Build it:
 
-        cd mydroid/repo
+        cd AOSP/repo
         . build/envsetup.sh
         make mkbootimg unbootimg
         # sadly that can't install unpack.sh and repack.sh so we need:
-        mmm system/core/mkbootimg
+        mmm external/unbootimg
 
-- Put `mydroid/repo/out/host/linux-x86/bin` in your path. Easiest way to do this
+- Put `AOSP/repo/out/host/linux-x86/bin` in your path. Easiest way to do this
 is:
 
         setpaths  # this is defined by Android build system: . build/envsetup.sh
